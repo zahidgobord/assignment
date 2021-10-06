@@ -1,0 +1,26 @@
+<!-- <ul>
+    <li *ngFor = "let user of userd">
+      {{ user.email }}
+  
+    </li>
+  </ul> -->
+<div class="outertab">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let user of userd">
+        <th scope="row">1</th>
+        <td>{{user.name}}</td>
+        <td>{{user.age}}</td>
+        <td>{{user.email}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

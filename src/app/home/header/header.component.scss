@@ -1,0 +1,68 @@
+// div{
+//     background-color: navy;
+//     width: 98%;
+//     overflow: hidden;
+//     padding: 20px 10px;
+//     color: white;
+    
+//     #Profile{
+//         color: white;
+//         background-color:darkgreen;
+//         text-decoration: none;
+//         margin-left: 75%;
+//         padding: 10px;
+//     }
+//     #logout{
+//         color: white;
+//         background-color:darkgreen;
+//         text-decoration: none;
+//         margin-left: 10%;
+//         padding: 10px;
+        
+//     }
+// }
+
+.header {
+    overflow: hidden;
+    background-color: #0e2f4b;
+    padding: 20px 10px;
+    color: white;
+  }
+
+  .header-right {
+    float: right;
+  }
+
+  .header a.active {
+    background-color: dodgerblue;
+    color: white;
+    margin-right: 20px;
+  }
+
+  .header a.active1 {
+    background-color: dodgerblue;
+    color: white;
+    margin-right: 60px;
+  }
+
+  @media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .header-right {
+      float: none;
+    }
+  }
+  .header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+  }

@@ -1,0 +1,20 @@
+<div class="login" *ngIf = "notsucess">
+    <form [formGroup]="loginForm1" (ngSubmit)="credential()" class="form">
+      <br>
+      <br>
+      <label for="exampleLogin1" class="form-label" style="font-size: x-large">Log in to your account</label>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="text" placeholder="username@example.com" formControlName="user" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <span style="color: red;" *ngIf="user && user.invalid && user.touched">Enter valid username</span>
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" placeholder="enter password" formControlName="password1" class="form-control" id="exampleInputPassword1">
+        <span style="color: red;" *ngIf="password1 && password1.invalid && password1.touched">Enter valid Password</span>
+      </div>
+      <button  [disabled] = "loginForm1.invalid" (click)="credential()" type="submit" class="btn btn-primary">Login</button>
+    </form>
+  
+  </div>

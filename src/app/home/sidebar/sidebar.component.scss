@@ -1,0 +1,17 @@
+
+.sidebar
+    {background-color:rgb(51, 115, 139);
+    width: 10%;
+    margin-top: 0;
+    padding: 0;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    a {
+        cursor:pointer;
+        margin-left: 40px;
+        color:white;
+        text-decoration: none;
+    }
+    
+}

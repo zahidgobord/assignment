@@ -1,0 +1,42 @@
+<div class="out">
+  <form class="row g-3" [formGroup]="profileForm">
+    <div class="col-md-4">
+      <label  class="form-label">First name</label>
+      <input type="text" formControlName="firstname" class="form-control"   >
+      <span style="color: red;" *ngIf="firstname && firstname.invalid && firstname.touched">Invalid firstname</span>
+    </div>
+    <div class="col-md-4">
+      <label  class="form-label">Last name</label>
+      <input type="text"  formControlName="lastname" class="form-control"  value="Otto" >
+      <span style="color: red;" *ngIf="lastname && lastname.invalid && lastname.touched">Invalid lastname</span>
+    </div>
+    <div class="col-md-4">
+      <label for="validationDefaultUsername" class="form-label">Username</label>
+      <div class="input-group">
+        <label class="input-group-text" id="inputGroupPrepend2">@</label>
+        <input type="text" formControlName="username" class="form-control">
+        <span style="color: red;" *ngIf="username && username.invalid && username.touched">Invalid</span>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label  class="form-label">City</label>
+      <input type="text" formControlName="city" class="form-control"  >
+      <span style="color: red;" *ngIf="city && city.invalid && city.touched">Invalid City</span>
+    </div>
+    <div class="col-md-3">
+      <label  class="form-label">State</label>
+      <select class="form-select"   formControlName="state">
+        <option>option1</option>
+        <span style="color: red;" *ngIf="state &&  state.touched">required*</span>
+      </select>
+    </div>
+    <div class="col-md-3">
+      <label  class="form-label">Zip</label>
+      <input type="text" formControlName="zip" class="form-control"  >
+      <span style="color: red;" *ngIf="zip && zip.invalid && zip.touched">Invalid Zipcode</span>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" [disabled] = "profileForm.invalid"  type="button" (click)='profilesubmit()'>Submit form</button>
+    </div>
+  </form>
+</div>

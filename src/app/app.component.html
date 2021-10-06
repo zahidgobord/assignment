@@ -1,0 +1,4 @@
+
+
+<app-login (loginEvent)="login($event)"   *ngIf="loginStatus" ></app-login>
+<app-home  *ngIf="loginStatus == false" ></app-home>
